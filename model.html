@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title></title>
+</head> 
+<body>
+    <div id="container"></div>
+</body>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script id="demo" type="text/html">
+{{if isAdmin}}
+{{each list as value i}}
+<div class="row" id="goods-list">
+                        <div class="col-md-2 fadeInUp" data-wow-duration="0.5s">
+                            <div class="test">
+                   
+                                <a href="{{value.url}}" target="_blank">
+                                    <img src="{{value.imgsrc}}" class="img-responsive" alt=""/>
+                                </a>
+                           
+                                <ul style=" position:absolute; top:240px; bottom:0;width:100%; height:25px; display: none">
+                                    <li>
+                                        <a class="am-block fq-report" style="border-right:#B5DAFF 1px solid" id="doc-prompt-toggle" data-id="308135" data-report="0">举报</a>                                            
+                                    </li>
+                                    <li>
+                                        <span  data-tips="<img src='http://img.haodanku.com/1_540571560128_1482724564.jpg_310?f=http://img03.taobaocdn.com/bao/uploaded/i3/TB1N3GzOVXXXXcVXFXXXXXXXXXX_!!0-item_pic.jpg' style='width:50px;'><br/>正宗新会小青柑陈皮普洱茶 精美铁盒装<br>【在售价56.80元，券后价6.80元】<br/>优惠券链接：http://shop.m.taobao.com/shop/coupon.htm?seller_id=1046658019&amp;activity_id=21c021744e6b4e8f9fe164b000d75acf&amp;<br>下单链接：https://detail.tmall.com/item.htm?id=540571560128<br>小青柑全网销量第一 的5年天猫老店评分3红">复制文案
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="commodity_name">
+                            
+                                <a target="_blank" href="{{value.url}}">
+                                    <img src="images/tianmao.png">
+                                    <p>{{value.title}}</p>
+                                </a>
+                            
+                            </div>
+                            <div class="library_money">
+                                <span>劵后</span>
+                                <b>{{value.juanhou}}</b>
+                                    <span class="span_color">元</span>
+                                    <span class="first_money">{{value.cost}}元</span>
+                            </div>
+                            <div class="library_commission">
+                                    <span class="commission_color">佣金<strong>{{value.commission}}</strong></span>
+                                    <a href="http://pub.alimama.com/myunion.htm?#!/promo/self/campaign?campaignId=37309441&amp;shopkeeperId=undefined&amp;userNumberId=1046658019&amp;tab=2" target="_blank">
+                                        <span class="commission_direction">{{value.plan}}</span></a>
+                                        <span class="Sales">销量&nbsp;{{value.sales}}</span>
+                            </div>
+                            <div class="library_coupon">
+                                <table>
+                                    <tbody>
+                                            <tr>
+                                            <td class="am-padding-0" style="border-right: 1px solid #CCCCCC;">
+                                                <a target="_blank" style="color: #777777;" href="{{value.coupon.url}}">券<span class="text-primary">{{value.coupon.pic}}</span>元</a>
+                                            </td>
+                                            <td class="am-padding-0">
+                                                <a target="_blank" style="color: #777777;" href="{{value.coupon.url}}">余<span class="text-primary">{{value.coupon.yunum}}</span>张</a>
+                                            </td>
+                                            <td class="am-padding-0" style="border-left: 1px solid #CCCCCC;">
+                                                <a target="_blank" style="color: #777777;" href="{{value.coupon.url}}">已领
+                                                <span class="text-primary">{{value.coupon.yining}}</span>张</a> 
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                                    <p class="library_statistics">- - - - - -  近2小时跑单<span>{{value.paodan}}</span>  - - - - - -</p>
+                        </div>
+    {{/each}}
+    {{/if}}
+</script>
+<script>
+var data = {
+            title: '商品列表',
+            isAdmin: true,
+            list: [ {
+                        "id" : 1,
+                        "url" :"https://detail.tmall.com/item.htm?id=522857429940",
+                        "imgsrc" :"http://img.alicdn.com/imgextra/i2/TB1TE2UOVXXXXaUXXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg",
+                        "cost" : 29.90,
+                        "sales":7533,
+                        "title":"【寿全斋_红糖姜茶+黑糖姜茶】姜母茶",
+                        "plan" : "通用45.2%",
+                        "commission":"3.40",
+                        "juanhou":20,
+                        "paodan":"568",
+                        "coupon":{
+                            "yunum" : 553,
+                            "pic" : 10,
+                            "yining" : 1000,
+                            "url" :"http://shop.m.taobao.com/shop/coupon.htm?&sellerId=2836984312&activityId=216dfc6751b84d5eb2dba019a590aade",
+                            "txt":"真是fan"
+                                }
+                           
+                    },
+                    {
+                        "id" : 2,
+                        "url" :"https://detail.tmall.com/item.htm?id=36247161745",
+                        "imgsrc" :"http://img03.taobaocdn.com/bao/uploaded/i3/TB1iAFROVXXXXbvapXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg",
+                        "cost" : "118.00",
+                        "sales":"723",
+                        "title":"【赤豪】澳洲家庭牛排套餐团购",
+                        "plan" : "通用38.2%",
+                        "commission":"3.40",
+                        "juanhou":"21",
+                        "paodan":"568",
+                        "coupon":{
+                            "yunum" : "344",
+                            "pic" : "8",
+                            "yining" : "1000",
+                            "url" :"http://shop.m.taobao.com/shop/coupon.htm?&sellerId=2836984312&activityId=216dfc6751b84d5eb2dba019a590aade",
+                            "txt":"真是fan"
+                                }
+                           
+                    },
+                    {
+                        "id" : 3,
+                        "url" :"https://detail.tmall.com/item.htm?id=45619601796&sku_properties=122216507:113060",
+                        "imgsrc" :"http://img01.taobaocdn.com/bao/uploaded/i1/TB1loNALpXXXXc8XpXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg",
+                        "cost" : "89.00",
+                        "sales":"753",
+                        "title":"茶叶320g铁观音茶叶",
+                        "plan" : "定向26.2%",
+                        "commission":"3.40",
+                        "juanhou":"10",
+                        "paodan":"568",
+                        "coupon":{
+                            "yunum" : "552",
+                            "pic" : "6",
+                            "yining" : "1000",
+                            "url" :"http://shop.m.taobao.com/shop/coupon.htm?&sellerId=2836984312&activityId=216dfc6751b84d5eb2dba019a590aade",
+                            "txt":"真是fan"
+                                }
+                           
+                    },{
+                        "id" : 4,
+                        "url" :"https://detail.tmall.com/item.htm?id=522857429940",
+                        "imgsrc" :"http://img03.taobaocdn.com/bao/uploaded/i3/TB19iV0OFXXXXaaXFXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg",
+                        "cost" :"98.00",
+                        "sales":"7533",
+                        "title":"缦舞简约床上用品四件",
+                        "plan" : "鹊桥65.6%",
+                        "commission":"3.40",
+                        "juanhou":"60",
+                        "paodan":"568",
+                        "coupon":{
+                            "yunum" : "552",
+                            "pic" : "10",
+                            "yining" : "1000",
+                            "url" :"http://shop.m.taobao.com/shop/coupon.htm?&sellerId=2836984312&activityId=216dfc6751b84d5eb2dba019a590aade",
+                            "txt":"真是fan"
+                                }
+                           
+                    },{
+                        "id" : 5,
+                        "url" :"https://detail.tmall.com/item.htm?id=541589251106&skuId=3268099277440",
+                        "imgsrc" :"http://img04.taobaocdn.com/bao/uploaded/i4/TB1yN3TOXXXXXaaapXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg",
+                        "cost" : "39.90",
+                        "sales":"7533",
+                        "title":"骄子牧场花样奶酪",
+                        "plan" : "通用45.2%",
+                        "commission":"3.40",
+                        "juanhou":"50",
+                        "paodan":"568",
+                        "coupon":{
+                            "yunum" : "553",
+                            "pic" : "8",
+                            "yining" : "1000",
+                            "url" :"http://shop.m.taobao.com/shop/coupon.htm?&sellerId=2836984312&activityId=216dfc6751b84d5eb2dba019a590aade",
+                            "txt":"真是fan"
+                                }
+                           
+                    },{
+                        "id" : 6,
+                        "url" :"https://item.taobao.com/item.htm?id=536788582807",
+                        "imgsrc" :"http://img02.taobaocdn.com/bao/uploaded/i2/2472064634/TB2fCl0abBkpuFjy1zkXXbSpFXa_!!2472064634.jpg_310x310.jpg",
+                        "cost" : "28.90",
+                        "sales":"733",
+                        "title":"3瓶厨房清洁剂油污净",
+                        "plan" : "通用26.56%",
+                        "commission":"6.40",
+                        "juanhou":"30",
+                        "paodan":"568",
+                        "coupon":{
+                            "yunum" : "553",
+                            "pic" : "6",
+                            "yining" : "1000",
+                            "url" :"http://shop.m.taobao.com/shop/coupon.htm?&sellerId=2836984312&activityId=216dfc6751b84d5eb2dba019a590aade",
+                            "txt":"真是fan"
+                                }
+                           
+                    }
+                
+                ]
+        };
+
+var html = template('demo', data);
+document.getElementById('container').innerHTML = html;
+</script>
+</html>
